@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class ContactForm extends StatelessWidget {
@@ -10,18 +8,32 @@ class ContactForm extends StatelessWidget {
         title: Text('New contact'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(decoration: InputDecoration(labelText: 'Full Name', ),),
-            TextField(decoration: InputDecoration(labelText: 'Account Number'), keyboardType: TextInputType.number,),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: RaisedButton(
-                  child: Text('Create'),
-                  onPressed: (){
-
-              }),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Full Name',
+                ),
+                style: TextStyle(fontSize: 24.0),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: TextField(
+                decoration: InputDecoration(labelText: 'Account Number'),
+                keyboardType: TextInputType.number,
+                style: TextStyle(fontSize: 24.0),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16.0),
+              child: SizedBox(
+                width: double.maxFinite,
+                child: RaisedButton(child: Text('Create'), onPressed: () {}),
+              ),
             )
           ],
         ),
