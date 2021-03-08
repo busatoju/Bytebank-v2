@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Colors.green[900],
+        buttonTheme: ButtonThemeData(
+            buttonColor: Colors.blue,
+
+        ),
       ),
       home: Dashboard(),
     );
