@@ -23,7 +23,7 @@ class ContactsList extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: (){
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContactForm()));
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContactForm())).then((value) => debugPrint(value.toString()));
         }
       ),
     );
