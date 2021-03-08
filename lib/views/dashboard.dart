@@ -1,3 +1,4 @@
+import 'package:bytebank_version_two/views/contacts_list.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -16,23 +17,29 @@ class Dashboard extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                padding: EdgeInsets.all(8.0),
-                color: Theme.of(context).primaryColor,
-                width: 120,
-                height: 90,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(Icons.people, color: Colors.white,),
-                    Text('Contacts',
-                      style:
-                      TextStyle(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                    ),),
-                  ],
+              child: InkWell(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContactsList()));
+                },
+                child: Container(
+                  padding: EdgeInsets.all(8.0),
+                  color: Theme.of(context).primaryColor,
+                  width: 120,
+                  height: 90,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(Icons.people, color: Colors.white,),
+                      Text('Contacts',
+                        style:
+                        TextStyle(
+                          color: Colors.white,
+                          fontSize: 16.0,
+                      ),),
+                    ],
+
+                  ),
                 ),
               ),
             ),
