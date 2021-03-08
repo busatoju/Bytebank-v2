@@ -1,4 +1,3 @@
-
 import 'package:bytebank_version_two/views/dashboard.dart';
 import 'package:flutter/material.dart';
 
@@ -10,9 +9,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Colors.green[900],
+        accentColor: Colors.blueAccent[700],
         buttonTheme: ButtonThemeData(
-            buttonColor: Colors.blue,
-
+          buttonColor: Colors.blueAccent[700],
+          textTheme: ButtonTextTheme.primary,
         ),
       ),
       home: Dashboard(),
