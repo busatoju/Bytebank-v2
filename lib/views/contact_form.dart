@@ -46,7 +46,7 @@ class _ContactFormState extends State<ContactForm> {
               child: SizedBox(
                 width: double.maxFinite,
                 child: RaisedButton(child: Text('Create'), onPressed: () {
-                Contact newContact =  Contact(controllerName.text, int.tryParse(controllerAccountNumber.text));
+                Contact newContact =  Contact(1,controllerName.text, int.tryParse(controllerAccountNumber.text));
                 Navigator.pop(context, newContact);
                 }),
               ),
