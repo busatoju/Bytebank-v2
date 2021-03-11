@@ -45,7 +45,7 @@ class ContactsList extends StatelessWidget {
               );
               break;
           }
-          return Text('Unknow Error');
+          return Text('Unknown Error');
 
 
 
@@ -56,8 +56,7 @@ class ContactsList extends StatelessWidget {
           child: Icon(Icons.add),
           onPressed: () {
             Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => ContactForm()))
-                .then((value) => debugPrint(value.toString()));
+                .push(MaterialPageRoute(builder: (context) => ContactForm()));
           }),
     );
   }
